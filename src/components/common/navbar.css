@@ -1,0 +1,50 @@
+.main-nav{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu svg{
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 767px){
+    .mobile-menu{
+        display: block;
+        order: 2;
+        cursor: pointer;
+        padding: 5px;
+    }
+}
+
+.menu ul > li {
+    display: inline-block;
+}
+
+.menu ul > li > a {
+    padding: 15px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px){
+    .menu{
+        margin-top: 70px;
+        position: absolute;
+        top: 0;
+        background: var(--theme-light-color);
+        width: 100%;
+        text-align: center;
+        display: none;
+        transition: ease .3s;
+    }
+    .menu ul > li {
+        display: block;
+    }
+    
+}
