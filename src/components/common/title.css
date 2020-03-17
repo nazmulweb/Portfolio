@@ -1,0 +1,9 @@
+.title{
+    font-size: 18px;
+    padding: 10px;
+    background: var(--theme-light-color);
+    display: block;
+    width: 120px;
+    margin: 20px 0;
+    text-align: center;
+}

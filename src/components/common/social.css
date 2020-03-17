@@ -1,0 +1,9 @@
+.social li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.social li a{
+   display: block;
+   color: var(--blue-color);
+}

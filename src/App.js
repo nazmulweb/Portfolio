@@ -2,12 +2,17 @@ import React from 'react';
 import './App.css';
 // import { NavBar } from './components/common/navbar'
 import NavBar from './components/common/navbar'
+import { Intro, About} from './components'
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <NavBar />
-    </div>
+      <main>
+        <Intro />
+        <About />
+      </main>
+    </React.Fragment>
   );
 }
 

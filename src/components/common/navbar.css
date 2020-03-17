@@ -1,9 +1,19 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
 .main-nav{
     display: flex;
     height: 70px;
     align-items: center;
     justify-content: space-between;
     position: relative;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .mobile-menu{
@@ -42,6 +52,7 @@
         text-align: center;
         display: none;
         transition: ease .3s;
+        z-index: 99;
     }
     .menu ul > li {
         display: block;
