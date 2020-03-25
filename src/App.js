@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 // import { NavBar } from './components/common/navbar'
 import NavBar from './components/common/navbar'
-import { Intro, About, Skill} from './components'
+import { Intro, About, Skill, Portfolio} from './components'
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Intro />
         <About />
         <Skill />
+        <Portfolio />
       </main>
     </React.Fragment>
   );

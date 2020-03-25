@@ -17,7 +17,6 @@ export class Skill extends Component {
     render() {
         const { datas } = this.state
         if(data !== null){
-            console.log(datas)
             return (
                 <React.Fragment>
                 <section className="skill-area mt-5">
@@ -29,7 +28,7 @@ export class Skill extends Component {
                             <div className="col-sm-12">
                                 <div className="skill">
                                     {datas.map(({name, percent}) => 
-                                        <div className="skill-card">
+                                        <div className="skill-card" key={name}>
                                             <div className="skill-details">
                                                 <h5>{name}</h5>
                                                 <p>{percent}%</p>
