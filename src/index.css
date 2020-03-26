@@ -5,10 +5,11 @@
   --blue-color: #05c5ff;
   --white-color: #fff;
   --theme-light-color: #1A2B5F;
+  --border-color: #37456f;
 
 }
 
-*{
+*, *::after, *::before{
   margin: 0;
   padding: 0;
   box-sizing: border-box;

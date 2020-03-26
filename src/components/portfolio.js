@@ -8,7 +8,7 @@ export class Portfolio extends Component {
         super(props);
         this.state = {
             portfolios: [],
-            sortPortfolioData: []
+            sortPortfolioData: "Web"
         }
         this.selectedPortfolio = this.selectedPortfolio.bind(this)
     }
@@ -17,7 +17,6 @@ export class Portfolio extends Component {
         this.setState({
             portfolios: Object.keys(works)
         })
-        this.selectedPortfolio()
     }
 
     selectedPortfolio = (data) =>{
@@ -27,9 +26,11 @@ export class Portfolio extends Component {
     }
 
     render() {
-        // const { portfolios, sortPortfolioData } = this.state
-        if( this.state.portfolios !== undefined){
-            const sortDatas = works[this.state.sortPortfolioData]
+
+        const { portfolios, sortPortfolioData} = this.state;
+
+        if( portfolios !== undefined){
+            const sortDatas = works[sortPortfolioData]
             return (
                 <React.Fragment>
                     <section className="about-area mt-5">
@@ -38,14 +39,15 @@ export class Portfolio extends Component {
                                 <div className="col-sm-12">
                                     <Title title="Portfolio" mtBottom = "40px" />
                                 </div>
-                                <div className="col-sm-12">
-                                    <ul>
+                                <div className="col-sm-12 mb-4">
+                                    <ul className="portfolio-menu">
                                         {
-                                           this.state.portfolios.map( portfolio =>{
+                                           portfolios.map( portfolio =>{
                                                 return (
                                                         <li 
                                                             key={portfolio}
                                                             onClick={() => this.selectedPortfolio(portfolio)}
+                                                            className={ portfolio === sortPortfolioData ? "active" : "" }
                                                         >
                                                             {portfolio}
                                                         </li>
@@ -59,7 +61,19 @@ export class Portfolio extends Component {
                                         sortDatas.map( (data, key) =>{
                                             return(
                                                 <div className="col-sm-12 col-md-6 col-lg-4" key={key}>
-                                                    <div className="card portfolio-card mb-4">{data.name}</div>
+                                                    <div className="card portfolio-card mb-4">
+                                                        <a href={data.demo} target="_blank">{data.name}</a>
+                                                        <p className="mt-3">{data.description}</p>
+                                                        <ul>
+                                                            { 
+                                                                data.tools.map( (sub_data, key ) => {
+                                                                    return (
+                                                                            <li className="tools" key={`${key}_${sub_data}`}>{ sub_data }</li>
+                                                                            )
+                                                                        })
+                                                            }
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             )
                                         })
