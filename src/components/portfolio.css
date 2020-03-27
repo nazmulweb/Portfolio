@@ -23,7 +23,7 @@
 
 .portfolio-card a{
     font-size: 20px;
-    color: #fff;
+    color: var(--white-color);
     font-weight: 700;
 }
 
