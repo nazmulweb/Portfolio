@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-// import { NavBar } from './components/common/navbar'
-import NavBar from './components/common/navbar'
-import { Intro, About, Skill, Portfolio, WorkingHistory} from './components'
+import { NavBar, Footer } from './components/common'
+import { Intro, About, Skill, Portfolio, WorkingHistory, Contact} from './components'
 
 function App() {
   return (
@@ -14,6 +13,8 @@ function App() {
         <Skill />
         <Portfolio />
         <WorkingHistory />
+        <Contact />
+        <Footer />
       </main>
     </React.Fragment>
   );

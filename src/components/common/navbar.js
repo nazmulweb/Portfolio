@@ -56,4 +56,4 @@ import { IoIosMenu } from "react-icons/io";
     }
 }
 
-export default NavBar
+export { NavBar }
