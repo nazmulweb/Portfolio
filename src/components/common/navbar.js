@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from "./logo";
 import "./navbar.css"
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Events, animateScroll as scroll, scroller } from 'react-scroll'
 import { IoIosMenu } from "react-icons/io";
 
  class NavBar extends Component {
@@ -12,7 +12,64 @@ import { IoIosMenu } from "react-icons/io";
             isToggle : false
         }
         this.handleClick = this.handleClick.bind(this)
+        this.scrollToTop = this.scrollToTop.bind(this);
     }
+    
+      componentDidMount() {
+    
+        Events.scrollEvent.register('begin', function () {
+          console.log("begin", arguments);
+        });
+    
+        Events.scrollEvent.register('end', function () {
+          console.log("end", arguments);
+        });
+    
+      }
+
+      scrollToTop() {
+        scroll.scrollToTop();
+      }
+
+      scrollTo() {
+        scroller.scrollTo('scroll-to-element', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        })
+      }
+
+      scrollToWithContainer() {
+    
+        let goToContainer = new Promise((resolve, reject) => {
+    
+          Events.scrollEvent.register('end', () => {
+            resolve();
+            Events.scrollEvent.remove('end');
+          });
+    
+          scroller.scrollTo('scroll-container', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+          });
+    
+        });
+    
+        goToContainer.then(() =>
+          scroller.scrollTo('scroll-container-second-element', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            containerId: 'scroll-container'
+          }));
+      }
+
+      componentWillUnmount() {
+        Events.scrollEvent.remove('begin');
+        Events.scrollEvent.remove('end');
+      }
+
 
     handleClick = () =>{
         this.setState({
@@ -40,7 +97,7 @@ import { IoIosMenu } from "react-icons/io";
                                 </div>
                                 <nav className="menu" style={{display: isToggle ? "block" : ''}}>
                                     <ul>
-                                        <li><Link>About Me</Link></li>
+                                        <li><Link activeClass="active" to="test1" spy={true} smooth={true} duration={6000} >About Me</Link></li>
                                         <li><Link>Skill</Link></li>
                                         <li><Link>Portfolio</Link></li>
                                         <li><Link>Contact Me</Link></li>
