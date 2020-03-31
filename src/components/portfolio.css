@@ -1,3 +1,7 @@
+.portfolio-menu{
+    text-align: center;
+}
+
 .portfolio-menu li{
     display: inline-block;
     padding: 8px 20px;

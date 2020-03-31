@@ -1,10 +1,10 @@
 import React from 'react'
 import './title.css'
 
-const Title = ({title, mtBottom})  => {
+const Title = ({title, mtBottom, textAlign})  => {
     return (
         <React.Fragment>
-            <h4 className="title" style={{marginBottom: mtBottom ? mtBottom : ''}}>{title}</h4>
+            <h2 className="title" style={{marginBottom: mtBottom ? mtBottom : '', textAlign }}>{title}</h2>
         </React.Fragment>
     )
 }

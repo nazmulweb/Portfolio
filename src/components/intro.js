@@ -15,7 +15,7 @@ import './intro.css'
                                     <h1>Nazmul Hasan</h1>
                                     <h3>Front-end Developer</h3>
                                 </div>
-                                <Title title="Follow Me" />
+                                <h4>Follow Me</h4>
                                 <Social />
                             </div>
                         </div>
