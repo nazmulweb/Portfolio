@@ -1,0 +1,18 @@
+.scroll-to-top{
+    background: var(--theme-color);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+    box-sizing: initial;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}

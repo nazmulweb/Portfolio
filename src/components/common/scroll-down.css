@@ -5,6 +5,10 @@
     transform: translateX(-50%);
 }
 
+.scroll-down a{
+  cursor: pointer;
+}
+
 .scroll-down a span {
     position: absolute;
     top: 0;

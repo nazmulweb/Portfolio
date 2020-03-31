@@ -2,13 +2,21 @@
     position: fixed;
     width: 100%;
     z-index: 9;
+    transition: top 0.3s;
+    top: 0;
+    height: 70px;
 }
+
+.stickyNav{
+    background: var(--theme-light-color);
+}
+
 .main-nav{
     display: flex;
-    height: 70px;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    height: 70px;   
 }
 
 .logo {
@@ -35,6 +43,7 @@
 
 .menu ul > li {
     display: inline-block;
+    cursor: pointer;
 }
 
 .menu ul > li > a {

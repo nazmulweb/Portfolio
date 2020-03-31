@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Social, Button } from './'
+import { Social, Button, ScrollToTop } from './'
 import './footer.css'
 
 export class Footer extends Component {
@@ -13,6 +13,7 @@ export class Footer extends Component {
                                 <h1>Thank You</h1>
                                 <Button title="Contact Me" link="mailto:nazmulhasan598040@gmail.com"/>
                                 <Social />
+                                <ScrollToTop />
                             </div>
                         </div>
                     </div>

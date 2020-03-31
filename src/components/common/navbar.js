@@ -1,75 +1,46 @@
 import React, { Component } from 'react';
 import Logo from "./logo";
 import "./navbar.css"
-import { Link, Events, animateScroll as scroll, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 import { IoIosMenu } from "react-icons/io";
 
  class NavBar extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            isToggle : false
-        }
-        this.handleClick = this.handleClick.bind(this)
-        this.scrollToTop = this.scrollToTop.bind(this);
+  constructor(props){
+      super(props);
+      this.state = {
+          isToggle : false,
+          stickyNav: false
+      }
+      this.handleClick = this.handleClick.bind(this)
+      this.stickyRef = React.createRef()
     }
-    
-      componentDidMount() {
-    
-        Events.scrollEvent.register('begin', function () {
-          console.log("begin", arguments);
-        });
-    
-        Events.scrollEvent.register('end', function () {
-          console.log("end", arguments);
-        });
-    
-      }
 
-      scrollToTop() {
-        scroll.scrollToTop();
-      }
+    componentDidMount () {
+      let prevScroll = window.pageYOffset
+      let stickyNavBg = this.stickyRef.current
+      window.addEventListener('scroll', ()=> {
+        let currentScroll = window.pageYOffset
+        if( prevScroll < currentScroll){
+          this.setState({
+            stickyNav: true
+          })
+        } else{
+          this.setState({
+            stickyNav: false
+          })
+        }
 
-      scrollTo() {
-        scroller.scrollTo('scroll-to-element', {
-          duration: 800,
-          delay: 0,
-          smooth: 'easeInOutQuart'
-        })
-      }
+        if(currentScroll > 80 ){
+          stickyNavBg.classList.add("stickyNav")
+        } else{
+          stickyNavBg.classList.remove("stickyNav")
+        }
 
-      scrollToWithContainer() {
-    
-        let goToContainer = new Promise((resolve, reject) => {
-    
-          Events.scrollEvent.register('end', () => {
-            resolve();
-            Events.scrollEvent.remove('end');
-          });
-    
-          scroller.scrollTo('scroll-container', {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart'
-          });
-    
-        });
-    
-        goToContainer.then(() =>
-          scroller.scrollTo('scroll-container-second-element', {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart',
-            containerId: 'scroll-container'
-          }));
-      }
-
-      componentWillUnmount() {
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
-      }
-
+        prevScroll = currentScroll
+      })
+      
+    }
 
     handleClick = () =>{
         this.setState({
@@ -79,10 +50,9 @@ import { IoIosMenu } from "react-icons/io";
     
     render() {
 
-        const { isToggle } = this.state;
-
+        const { isToggle, stickyNav } = this.state;
         return (
-            <header className="header">
+            <header className="header" style={{ top:  stickyNav ? "-70px" : "0"}} ref={this.stickyRef}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12">
@@ -97,11 +67,11 @@ import { IoIosMenu } from "react-icons/io";
                                 </div>
                                 <nav className="menu" style={{display: isToggle ? "block" : ''}}>
                                     <ul>
-                                        <li><Link activeClass="active" to="test1" spy={true} smooth={true} duration={6000} >About Me</Link></li>
-                                        <li><Link>Skill</Link></li>
-                                        <li><Link>Portfolio</Link></li>
-                                        <li><Link>Contact Me</Link></li>
-                                        <li><Link>Resume</Link></li>
+                                        <li><Link activeClass="active" to="about" spy={true} smooth={true} duration={600} >About Me</Link></li>
+                                        <li><Link activeClass="active" to="skill" spy={true} smooth={true} duration={600} >Skill</Link></li>
+                                        <li><Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={600} >Portfolio</Link></li>
+                                        <li><Link activeClass="active" to="contact" spy={true} smooth={true} duration={600} >Contact Me</Link></li>
+                                        <li><Link >Resume</Link></li>
                                     </ul>
                                 </nav>
                             </div>

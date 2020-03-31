@@ -1,12 +1,12 @@
 .contact{
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
 }
 
 .contact li{
     display: flex;
     align-items: center;
+    font-size: 18px;
 }
 
 .contact li span{
@@ -22,6 +22,7 @@
     text-align: center;
     line-height: 50px;
     margin: 0 20px;
+    font-size: 24px;
 }
 
 .contact li:first-child{

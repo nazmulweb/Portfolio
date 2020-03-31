@@ -11,15 +11,21 @@ function App() {
       <NavBar />
       <main>
         <Intro />
-        <Element name="test1" className="element" >
+        <Element name="about" className="element" >
           <About />
         </Element>
-        <Skill />
-        <Portfolio />
+        <Element name="skill" className="element" >
+          <Skill />
+        </Element>
+        <Element name="portfolio" className="element" >
+          <Portfolio />
+        </Element>
         <WorkingHistory />
-        <Contact />
-        <Footer />
+        <Element name="contact" className="element" >
+          <Contact />
+        </Element>
       </main>
+      <Footer />
     </React.Fragment>
   );
 }
