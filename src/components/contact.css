@@ -55,11 +55,11 @@
 @media only screen and (max-width: 767px){
     .contact{
         flex-direction: column;
-        font-size: 14px;
     }
-
+    
     .contact li{
         padding: 10px 0;
+        font-size: 14px;
     }
 
     .contact li span{

@@ -15,6 +15,10 @@
     -o-border-radius: 5px;
 }
 
+.portfolio-menu li:last-child{
+    margin-right: 0 ;
+}
+
 .portfolio-menu li.active{
     background: var(--blue-color);
 }

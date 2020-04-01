@@ -38,3 +38,45 @@
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
 }
+
+.about-left .title::before{
+    left: 0;
+    transform: translate(0%, 0);
+    -webkit-transform: translate(0%, 0);
+    -moz-transform: translate(0%, 0);
+    -ms-transform: translate(0%, 0);
+    -o-transform: translate(0%, 0);
+}
+
+.about-left .title::after{
+    left: 0;
+    transform: translate(0%, 0);
+    -webkit-transform: translate(0%, 0);
+    -moz-transform: translate(0%, 0);
+    -ms-transform: translate(0%, 0);
+    -o-transform: translate(0%, 0);
+}
+
+/* @media only screen and (max-width: 767px) */
+@media only screen and ( min-width: 768px ) and (max-width: 991px){
+    .contact-area .title{
+        text-align: left;
+    }
+    .contact-area .title::before{
+        left: 0;
+        transform: translate(0%, 0);
+        -webkit-transform: translate(0%, 0);
+        -moz-transform: translate(0%, 0);
+        -ms-transform: translate(0%, 0);
+        -o-transform: translate(0%, 0);
+    }
+    
+    .contact-area .title::after{
+        left: 0;
+        transform: translate(0%, 0);
+        -webkit-transform: translate(0%, 0);
+        -moz-transform: translate(0%, 0);
+        -ms-transform: translate(0%, 0);
+        -o-transform: translate(0%, 0);
+    }
+}

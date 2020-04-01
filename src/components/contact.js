@@ -7,7 +7,7 @@ export class Contact extends Component {
     render() {
         return (
           <React.Fragment>
-              <div className="container mt-5">
+              <div className="container mt-5 contact-area">
                   <div className="row">
                       <div className="col-sm-12">
                           <Title title="Contact" mtBottom = "40px"/>

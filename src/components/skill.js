@@ -4,8 +4,12 @@ import { Title } from './common'
 import './skill.css'
 
 export class Skill extends Component {
-    state = {
-        datas: []
+    constructor(props){
+        super(props)
+        this.state = {
+            datas: [],
+            sortSkillDatas: "Web"
+        }
     }
 
     componentDidMount = () =>{
@@ -14,9 +18,16 @@ export class Skill extends Component {
         })
     }
 
+    selectedSkill = (data) =>{
+        this.setState({
+            sortSkillDatas: data
+        })
+    }
+
     render() {
-        const { datas } = this.state
+        const { datas, sortSkillDatas } = this.state
         if(data !== null){
+            const skillDatas = datas[sortSkillDatas]
             return (
                 <React.Fragment>
                 <section className="skill-area mt-5">
@@ -25,17 +36,36 @@ export class Skill extends Component {
                             <div className="col-sm-12">
                                 <Title title="My Skills" mtBottom = "40px" />
                             </div>
+                            <div className="col-sm-12 mb-4">
+                                <ul className='skill-menu'>
+                                    {
+                                        Object.keys(datas).map( data => {
+                                            return(
+                                                <li 
+                                                    key={data}
+                                                    onClick={() => this.selectedSkill(data)}
+                                                    className={ data === sortSkillDatas ? "active" : "" }
+                                                >{data}</li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
                             <div className="col-sm-12">
                                 <div className="skill">
-                                    {datas.map(({name, percent}) => 
-                                        <div className="skill-card" key={name}>
-                                            <div className="skill-details">
-                                                <h5>{name}</h5>
-                                                <p>{percent}%</p>
-                                            </div>
-                                            <div style={{width: percent + "%"}} className="progress-bar"></div>
-                                        </div>
-                                    )}
+                                    {
+                                        skillDatas !== undefined ?
+                                            skillDatas.map( skillData => 
+                                                <div className="skill-card" key={skillData.name}>
+                                                    <div className="skill-details">
+                                                        <h5>{skillData.name}</h5>
+                                                        <p>{skillData.percent}%</p>
+                                                    </div>
+                                                    <div style={{width: skillData.percent + "%"}} className="progress-bar"></div>
+                                                </div>
+                                            )
+                                        : ""
+                                    }
                                 </div>
                             </div>
                         </div>
