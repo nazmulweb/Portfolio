@@ -78,7 +78,7 @@ import { Button } from './'
                                         <li><Link activeClass="active" to="skill" spy={true} smooth={true} duration={600} >Skill</Link></li>
                                         <li><Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={600} >Portfolio</Link></li>
                                         <li><Link activeClass="active" to="contact" spy={true} smooth={true} duration={600} >Contact Me</Link></li>
-                                        <li><Button title="Resume"></Button></li>
+                                        <li><Button title="Resume" link="https://github.com/nazmulweb/Portfolio/raw/master/src/data/Nazmul's_CV.pdf" target="_blank"></Button></li>
                                     </ul>
                                 </nav>
                             </div>

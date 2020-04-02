@@ -4,3 +4,7 @@
     padding: 10px 20px;
     color: #fff;
 }
+
+.btn-main:hover{
+    color: var(--blue-color)
+}
