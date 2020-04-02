@@ -1,3 +1,7 @@
 .profile-photo{
     border-radius: 10px;
 }
+
+.about-left p{
+    line-height: 30px;
+}

@@ -13,8 +13,7 @@ export class About extends Component {
                             <div className="col-sm-12 col-md-12 order-md-2 order-1 col-lg-6">
                                 <div className="about-left">
                                     <Title title="About Me" mtBottom = "40px" textAlign="left"/>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam culpa vero, earum rerum mollitia quis deserunt, perferendis velit debitis quasi placeat, dolor sequi? Assumenda rem provident sit vel quasi saepe, eveniet corporis minus recusandae explicabo iusto similique exercitationem? Consequuntur hic quaerat corrupti, veritatis sit beatae quibusdam fugit consequatur veniam expedita!</p>
-                                    <p className="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, perspiciatis. Totam eligendi voluptatem fugiat modi quidem nobis assumenda obcaecati praesentium?</p>
+                                    <p>My name is Nazmul Hasan. I am a Front-end developer. I have been working at Saros IT for 1+ years and also 5+ years of professional graphic design skills. My core skill is based on HTML, CSS, and Javascript. I have a serious passion for building mobile responsive and cross-browser supported modern front-end web applications and web design.</p>
                                     <Button title="Get Resume"/>
                                 </div>
                             </div>
