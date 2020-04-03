@@ -62,6 +62,13 @@ export class Portfolio extends Component {
                                             return(
                                                 <div className="col-sm-12 col-md-6 col-lg-4" key={key}>
                                                     <div className="card portfolio-card mb-4">
+                                                        {
+                                                        data.image ?
+                                                            <a href={data.demo} target="_blank" className="mb-3">
+                                                                <img className="card-img-top" src={data.image} alt={data.description} />
+                                                            </a>
+                                                        : ""
+                                                        }
                                                         <a href={data.demo} target="_blank">{data.name}</a>
                                                         <p className="mt-3">{data.description}</p>
                                                         <ul>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Photo from '../assets/img/me.png'
+import Photo from '../assets/img/Myphoto.png'
 import { Title, Button } from './common'
 import './about.css'
 
@@ -13,7 +13,7 @@ export class About extends Component {
                             <div className="col-sm-12 col-md-12 order-md-2 order-1 col-lg-6">
                                 <div className="about-left">
                                     <Title title="About Me" mtBottom = "40px" textAlign="left"/>
-                                    <p>My name is Nazmul Hasan. I am a Front-end developer. I have been working at Saros IT for 1+ years and also 5+ years of professional graphic design skills. My core skill is based on HTML, CSS, and Javascript. I have a serious passion for building mobile responsive and cross-browser supported modern front-end web applications and web design.</p>
+                                    <p>My name is Nazmul Hasan. I am a Front-end developer. I have been working at Saros IT for 1+ years as a Front-end developer and also I have 5+ years of professional graphic design skills. My core skill is based on HTML, CSS, and Javascript. I have a serious passion for building mobile responsive and cross-browser supported modern front-end web applications and web design.</p>
                                     <Button title="Get Resume" link="https://github.com/nazmulweb/Portfolio/raw/master/src/data/Nazmul's_CV.pdf" target="_blank"/>
                                 </div>
                             </div>
