@@ -57,12 +57,13 @@ export const works = {
   ],
   Others: [
     {
-      name: "DevSonket",
+      name: "Design Portfolio",
+      image: require('../assets/img/behance.jpg'),
       description:
-        "A Collection of Bengali Cheatsheets for the developers, completely open-source",
-      demo: "https://github.com/nazmulweb",
-      source: "https://github.com/devsonket/devsonket.github.io",
-      tools: ["gatsby", "json", "travis ci"],
+        "Please take a look my design portfolio",
+      demo: "https://www.behance.net/nazmulweb",
+      source: "https://www.behance.net/nazmulweb",
+      tools: ["Behance"],
     },
   ],
 }

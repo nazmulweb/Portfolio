@@ -6,7 +6,7 @@ export function ScrollDown() {
     return (
         <React.Fragment>
             <div className="scroll-down">
-                <a onClick={() => scroll.scrollMore(670)}><span></span></a>
+                <a onClick={() => scroll.scrollMore(720)}><span></span></a>
             </div>
         </React.Fragment>
     )
