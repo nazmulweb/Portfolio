@@ -65,5 +65,14 @@ export const works = {
       source: "https://www.behance.net/nazmulweb",
       tools: ["Behance"],
     },
+    {
+      name: "Dribbble Portfolio",
+      image: require('../assets/img/dribbble.jpg'),
+      description:
+        "Please take a look my Dribbble shot",
+      demo: "https://dribbble.com/nazmulweb",
+      source: "https://dribbble.com/nazmulweb",
+      tools: ["Dribbble"],
+    }
   ],
 }
