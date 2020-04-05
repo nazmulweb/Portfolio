@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Logo from "./logo";
 import "./navbar.css"
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
 import { IoIosMenu } from "react-icons/io";
 import { Button } from './'
  
@@ -65,7 +65,7 @@ import { Button } from './'
                         <div className="col-sm-12">
                             <div className="main-nav">
                                 <div className="logo">
-                                    <Link to="/">
+                                    <Link onClick={() => scroll.scrollToTop()} to="/">
                                         <Logo />
                                     </Link>
                                 </div>

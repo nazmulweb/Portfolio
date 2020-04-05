@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Title, Social, ScrollDown } from './common/index'
+import { Social, ScrollDown } from './common/index'
 import './intro.css'
 
  class Intro extends Component {

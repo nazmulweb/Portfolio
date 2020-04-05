@@ -64,12 +64,12 @@ export class Portfolio extends Component {
                                                     <div className="card portfolio-card mb-4">
                                                         {
                                                         data.image ?
-                                                            <a href={data.demo} target="_blank" className="mb-3">
+                                                            <a href={data.demo} target="_blank" className="mb-3" rel="noopener noreferrer">
                                                                 <img className="card-img-top" src={data.image} alt={data.description} />
                                                             </a>
                                                         : ""
                                                         }
-                                                        <a href={data.demo} target="_blank">{data.name}</a>
+                                                        <a href={data.demo} target="_blank" rel="noopener noreferrer">{data.name}</a>
                                                         <p className="mt-3">{data.description}</p>
                                                         <ul>
                                                             { 
