@@ -3,7 +3,7 @@ export const workinghistory = [
         company: "Saros IT",
         startDate: "Jan, 2019",
         endDate: "Continuing",
-        role: "Jr.Front end Developer",
+        role: "Web Developer",
         responsibility: "Building stable and maintainable modern website using ReactJs. Creating modular, responsive templates using modern CSS techniques and JavaScript libraries"
     },
     {

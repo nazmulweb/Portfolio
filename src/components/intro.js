@@ -13,7 +13,7 @@ import './intro.css'
                                 <div className="intro-me">
                                     <p>Hello, I am</p>
                                     <h1>Nazmul Hasan</h1>
-                                    <h3>Front-end Developer</h3>
+                                    <h3>Web Developer</h3>
                                 </div>
                                 <h4>Follow Me</h4>
                                 <Social />

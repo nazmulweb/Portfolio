@@ -25,7 +25,7 @@ export const works = {
         "It is a modern website for a digital agency. It's made by me. Some pages are under construction",
       demo: "https://sarosit.com",
       source: "https://sarosit.com",
-      tools: ["HTML", "CSS", "jQuery"]
+      tools: ["HTML", "CSS", "jQuery", "PHP"]
     },
     {
       name: "Amar Office",
