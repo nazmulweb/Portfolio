@@ -7,7 +7,7 @@ export const works = {
         "It is a discount coupon generating web application for restaurant made by Reactjs",
       demo: "http://chomokoffer.com",
       source: "http://chomokoffer.com",
-      tools: ["React", "Redux"],
+      tools: ["React", "Redux", "Javascript", "Laravel"],
     },
     {
       name: "Igloo",
@@ -16,7 +16,7 @@ export const works = {
         "Igloo is an eCommerce website for Igloo ice cream. Anyone can buy ice cream from here",
       demo: "https://www.igloobd.com",
       source: "https://www.igloobd.com",
-      tools: ["HTML", "CSS", "jQuery"]
+      tools: ["HTML", "CSS", "jQuery", "PHP", "Laravel"]
     },
     {
       name: "Saros IT",
